@@ -1,0 +1,2 @@
+# fortune-teller
+Pocket-Oracle
