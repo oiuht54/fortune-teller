@@ -1,6 +1,6 @@
 # 🔮 Void Oracle (Фрактальный Предсказатель)
 
-[![Check it on Vercel!](https://vercel.com/button)](https://fortune-teller-sigma.vercel.app/)
+[![Visit App](https://img.shields.io/badge/Visit-Live_App-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://fortune-teller-sigma.vercel.app/)
 
 > "Грядущее скрыто в тумане времени, но математика может приоткрыть завесу."
 
