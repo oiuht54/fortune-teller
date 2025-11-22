@@ -12,13 +12,10 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [hasInteracted, setHasInteracted] = useState<boolean>(false);
 
-  // Callback для звука, который не пересоздается при каждом рендере
   const playSound = useCallback(() => {
     soundManager.playKeystroke();
   }, []);
 
-  // Передаем playSound в хук
-  // Скорость 30ms — достаточно быстро, чтобы звучало как поток данных
   const displayedText = useTypewriter(fullPrediction, 30, playSound);
 
   const oracle = useMemo(() => new TextOracle(), []);
@@ -52,17 +49,14 @@ export default function Home() {
   const handleDivination = () => {
     if (isLoading) return;
 
-    // Включаем звук (фон) только при первом клике
     if (!hasInteracted) {
       soundManager.initAudio();
       soundManager.startDrone();
       setHasInteracted(true);
     }
 
-    // Сначала очищаем текст, чтобы эффект печати перезапустился
     setFullPrediction("");
 
-    // Генерируем новый текст с небольшой задержкой, чтобы UI "мигнул"
     setTimeout(() => {
       const text = oracle.generatePrediction();
       setFullPrediction(text);

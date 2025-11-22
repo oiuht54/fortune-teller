@@ -15,10 +15,6 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        /*
-          suppressHydrationWarning={true} игнорирует ошибки несоответствия атрибутов,
-          вызванные расширениями браузера. Это безопасно для SEO и пользователей.
-        */
         <html lang="ru" suppressHydrationWarning={true}>
         <body className={inter.className}>{children}</body>
         </html>

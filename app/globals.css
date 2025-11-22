@@ -8,32 +8,15 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-          to bottom,
-          transparent,
-          rgb(var(--background-end-rgb))
-  )
-  rgb(var(--background-start-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
   min-height: 100vh;
 }
-
-/*
-   В Tailwind v4 можно использовать стандартный CSS синтаксис @layer utilities,
-   но для простоты мы можем определить анимацию просто как глобальный класс
-   или использовать нативный CSS, который Tailwind подхватит.
-*/
 
 .animate-pulse-once {
   animation: fadeIn 0.5s ease-in-out;
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
